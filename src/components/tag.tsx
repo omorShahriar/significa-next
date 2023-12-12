@@ -58,7 +58,7 @@ const Tag = ({
   href: string;
   active?: boolean;
   label: string;
-  className: string;
+  className?: string;
 }) => {
   const Element = href ? Link : typeof active === "boolean" ? "button" : "span";
   const interactable = !!href || typeof active === "boolean";

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import TopNavigation from "@/components/top-navigation";
+
 import Footer from "@/components/footer";
 export const metadata: Metadata = {
   title: "Significa Next Clone",

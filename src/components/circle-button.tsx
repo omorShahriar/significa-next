@@ -15,7 +15,14 @@ const circleButton = cva(
   }
 );
 
-const CircleButton = ({ className, icon, ...props }) => {
+const CircleButton = ({
+  className,
+  icon,
+  ...props
+}: {
+  className: string;
+  icon: string;
+}) => {
   const size = "md";
   return (
     <button

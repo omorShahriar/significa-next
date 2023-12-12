@@ -4,7 +4,21 @@ import Button from "./ui/button";
 import Tag from "./tag";
 import Person from "./person";
 
-const BlogEntry = ({ post }: { post: unknown }) => {
+interface BlogEntryProps {
+  post: {
+    author: {
+      name: string;
+      position: string;
+      photo: string;
+    };
+    created_at: string;
+    slug: string;
+    name: string;
+    tag_list: string[];
+  };
+}
+
+const BlogEntry = ({ post }: BlogEntryProps) => {
   return (
     <div className="border-b transition-colors elevated-links first:border-t hover:bg-foreground-tertiary/10">
       <div className="container mx-auto flex gap-6 px-container py-8 @container">

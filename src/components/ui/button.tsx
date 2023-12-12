@@ -86,6 +86,7 @@ interface ButtonProps {
   arrow?: React.ReactNode;
   children?: React.ReactNode;
   className?: string;
+  href?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
