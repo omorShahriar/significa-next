@@ -2,26 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+::selection {
+  color: theme('colors.background.DEFAULT');
+  background-color: theme('colors.foreground.DEFAULT');
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+
+
+.ulink {
+   --link-underline-color: var(--underline-color, hsl(240deg 1% 31%));
+    --link-underline-width: var(--underline-width, 0.2ch);
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.avatar{
+      width: 48px;
+    height: 56px;
+    -webkit-clip-path: path(
+      'M48 31.4019C48 44.987 37.2548 56 24 56C10.7452 56 0 44.987 0 31.4019C0 17.8167 10.7452 0 24 0C37.2548 0 48 17.8167 48 31.4019Z'
+    );
+            clip-path: path(
+      'M48 31.4019C48 44.987 37.2548 56 24 56C10.7452 56 0 44.987 0 31.4019C0 17.8167 10.7452 0 24 0C37.2548 0 48 17.8167 48 31.4019Z'
+    );
 }
